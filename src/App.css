@@ -1,0 +1,225 @@
+/* Imagen de fondo y contenedor principal */
+body {
+  background: url('https://images.vexels.com/content/125257/preview/bright-rainbow-drawing-c6b359.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: url('https://images.vexels.com/content/125257/preview/bright-rainbow-drawing-c6b359.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace; /* Fuente retro */
+}
+
+/* Contenedor principal de la calculadora */
+.calculator-container {
+  background: #e6c7d3;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 
+    inset 0 0 10px #8b4566,
+    5px 5px 0px #8b4566;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  border: 3px solid #8b4566;
+}
+
+/* Display de la calculadora */
+.calculator-display {
+  background: #3a3a3a;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 2px solid #222;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.display-current {
+  color: #c9a0b3;
+  text-align: right;
+  font-size: 1.2rem;
+  min-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Digital-7', 'Courier New', monospace;
+}
+
+.display-result {
+  color: #ffa7d1;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 700;
+  word-break: break-all;
+  font-family: 'Digital-7', 'Courier New', monospace;
+  text-shadow: 0 0 5px rgba(255, 167, 209, 0.7);
+}
+
+/* Grid de botones */
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+/* Estilos base para botones */
+.calculator-btn {
+  border: 2px solid #8b4566;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  box-shadow: 
+    2px 2px 0px #8b4566,
+    inset 2px 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Efecto para botones presionados */
+.calculator-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #8b4566;
+}
+
+/* Botones numéricos */
+.btn-number {
+  background: #d4a5b9;
+  color: #4a2435;
+}
+
+.btn-number:hover {
+  background: #c691aa;
+}
+
+/* Botones de operación */
+.btn-operator {
+  background: #b37b93;
+  color: #fff;
+  border-color: #8b4566;
+}
+
+.btn-operator:hover {
+  background: #a36d84;
+}
+
+/* Botón igual */
+.btn-equals {
+  background: #9e5c76;
+  color: white;
+  border-color: #8b4566;
+}
+
+.btn-equals:hover {
+  background: #8f526b;
+}
+
+/* Botón clear */
+.btn-clear {
+  background: #c77c9b;
+  color: white;
+  border-color: #8b4566;
+}
+
+.btn-clear:hover {
+  background: #b86f8d;
+}
+
+/* Historial */
+.history-container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 3px solid #8b4566;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.history-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a2435;
+  font-family: 'Courier New', monospace;
+}
+
+.history-clear-btn {
+  padding: 0.5rem 1rem;
+  background: #d4a5b9;
+  color: #4a2435;
+  border: 2px solid #8b4566;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #8b4566;
+  font-family: 'Courier New', monospace;
+}
+
+.history-clear-btn:hover {
+  background: #c691aa;
+}
+
+.history-clear-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #8b4566;
+}
+
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.history-item {
+  background: #e6c7d3;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #8b4566;
+  box-shadow: 2px 2px 0px #8b4566;
+}
+
+.history-operation {
+  color: #4a2435;
+  font-size: 0.9rem;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.history-result {
+  color: #4a2435;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+/* Scrollbar personalizado */
+.history-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: #e6c7d3;
+  border: 1px solid #8b4566;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #b37b93;
+  border: 1px solid #8b4566;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #9e5c76;
+}
